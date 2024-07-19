@@ -11,5 +11,10 @@ public class FabricaClient {
         fabrica.afisareAngajati();
         fabrica.adaugaClient(client);
         fabrica.afisareClienti();
+        try {
+            fabrica.eliberareFluturas(muncitor);
+        } catch(AngajatulAFostConcediat e) {
+            System.out.println("Angajatul "+muncitor+"a fost concediat.");
+        }
     }
 }
